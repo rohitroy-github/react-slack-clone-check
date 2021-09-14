@@ -6,7 +6,7 @@ const credentials = {
   instanceLocator: 'v1:us1:05f46048-3763-4482-9cfe-51ff327c3f29',
 }
 
-const { instanceLocator, url } = credentials
+const { instanceLocator, url } = credentials;
 export default ({ state, actions }, { id, token }) =>
   new Chatkit.ChatManager({
     tokenProvider: new Chatkit.TokenProvider({ url: url(id, token) }),
